@@ -52,15 +52,16 @@
                 <section class="section" id="highlights">
                     <h2>🔥 Highlights</h2>
                     <ul class="compact-list">
-                        <li><span class="date">2024</span> Led team of 20 → <strong>50% TAT reduction</strong> in tool
-                            chain optimization</li>
-                        <li><span class="date">2024</span> Developed Agentic AI framework with LLM-driven decision
-                            making</li>
-                        <li><span class="date">2024</span> Published <strong>Deep RL for FloorPlan Directive
-                                Optimization</strong></li>
-                        <li><span class="date">2023</span> <strong>90% accuracy</strong> in router complexity prediction
-                            using GNN</li>
-                        <li><span class="date">2023</span> Built system processing <strong>3.5B datapoints</strong></li>
+                        <li><span class="date">2024</span> <strong>Deep RL for FloorPlan Directive Optimization</strong>
+                            (Finalist)</li>
+                        <li><span class="date">2024</span> <strong>Agentic AI Framework</strong> with LLM-driven
+                            decision making</li>
+                        <li><span class="date">2024</span> <strong>SmolLMv2-PreTrain</strong>: Trained <strong>135M
+                                parameter</strong> model at <strong>40k tokens/sec</strong></li>
+                        <li><span class="date">2024</span> <strong>codingAgent</strong>: Achieved <strong>90% success
+                                rate</strong> with 8-Stage Pipeline</li>
+                        <li><span class="date">2024</span> <strong>ImageNetClassifier</strong>: <strong>77.4%
+                                accuracy</strong> on <strong>1.28M images</strong></li>
                     </ul>
                 </section>
 
@@ -125,20 +126,22 @@
                             <strong><a href="https://github.com/nirmalpratheep/Alignment_and_Reasoning_RL"
                                     target="_blank">Alignment_and_Reasoning_RL</a></strong>
                             <ul>
-                                <li><strong>GRPO/PPO alignment</strong> on Math Dataset using
-                                    <strong>Qwen2.5-Math-1.5B</strong> with <strong>TRL + Unsloth</strong></li>
-                                <li>Implemented <strong>RLHF pipeline</strong> with custom reward modeling; achieved
-                                    improved reasoning accuracy</li>
+                                <li>Evaluated <strong>Qwen 2.5 Math 1.5B</strong> on <strong>Math Dataset (12.5k
+                                        problems)</strong>; analyzed <strong>4,200+ format failures</strong></li>
+                                <li>Identified key capability gaps in <strong>mathematical reasoning</strong> vs parser
+                                    issues in <strong>1.5B parameter</strong> models</li>
                             </ul>
                         </div>
                         <div class="project">
                             <strong><a href="https://github.com/nirmalpratheep/RL-CarNavigationAgent"
                                     target="_blank">RL-CarNavigationAgent</a></strong>
                             <ul>
-                                <li>Built <strong>DQN agent</strong> with <strong>PyTorch</strong> and <strong>OpenAI
-                                        Gym</strong> for autonomous navigation</li>
-                                <li>Hyperparameter tuning with <strong>Optuna</strong>; achieved 95%+ success rate in
-                                    simulation</li>
+                                <li>Tuned <strong>RL hyperparameters</strong> (Gamma 0.95, Tau 0.005) using
+                                    <strong>TensorBoard</strong>; achieved <strong>stable learning (< 1.0 KL
+                                            Divergence)</strong>
+                                </li>
+                                <li>Optimized <strong>DQN agent</strong> physics parameters; visualized <strong>Average
+                                        Reward</strong> trends and gradient norms</li>
                             </ul>
                         </div>
                     </div>
@@ -149,20 +152,21 @@
                             <strong><a href="https://github.com/nirmalpratheep/SmolLMv2-PreTrain"
                                     target="_blank">SmolLMv2-PreTrain</a></strong>
                             <ul>
-                                <li><strong>Pre-training from scratch</strong> using <strong>Hugging Face Transformers +
-                                        Accelerate</strong></li>
-                                <li>Implemented <strong>distributed training</strong> with mixed-precision (FP16/BF16)
-                                    on multi-GPU setup</li>
+                                <li>Implemented <strong>SmolLM v2 pre-training</strong> (<strong>135M
+                                        parameters</strong>) on <strong>FineWeb-Edu dataset</strong> with <strong>Flash
+                                        Attention</strong></li>
+                                <li>Achieved <strong>~40k tokens/sec throughput</strong> using <strong>Mixed Precision
+                                        (BF16)</strong>; reduced loss from 11.6 to 0.0015</li>
                             </ul>
                         </div>
                         <div class="project">
                             <strong><a href="https://github.com/nirmalpratheep/MiniTamilBPETokenizer"
                                     target="_blank">MiniTamilBPETokenizer</a></strong>
                             <ul>
-                                <li>Custom <strong>BPE tokenizer</strong> for Tamil with <strong>8K vocab size</strong>;
-                                    trained on 10M+ tokens</li>
-                                <li>Built with <strong>tokenizers library</strong>; achieved 3x compression ratio for
-                                    Tamil text</li>
+                                <li>Developed <strong>Tamil BPE tokenizer</strong> (5k vocab) achieving <strong>3.1
+                                        char/token compression</strong> ratio</li>
+                                <li>Curated corpus from <strong>Project Madurai</strong> and <strong>Tamil
+                                        Wikipedia</strong>; deployed interactive demo via <strong>Gradio</strong></li>
                             </ul>
                         </div>
                     </div>
@@ -173,10 +177,21 @@
                             <strong><a href="https://github.com/nirmalpratheep/codingAgent"
                                     target="_blank">codingAgent</a></strong>
                             <ul>
-                                <li><strong>Multi-agent architecture</strong> using <strong>LangChain + OpenAI
-                                        API</strong> for autonomous bug fixing</li>
-                                <li>Implemented <strong>ReAct pattern</strong> with tool-use; tested on
-                                    <strong>SWE-Bench</strong> dataset</li>
+                                <li>Built <strong>8-Stage Bug Fixing Pipeline</strong> using <strong>Gemini 2.0
+                                        Flash</strong> and <strong>AST-based Dependency Analysis</strong></li>
+                                <li>Achieved <strong>90%+ success rate</strong> on tests by solving hidden dependencies
+                                    and optimizing <strong>token budget</strong></li>
+                            </ul>
+                        </div>
+                        <div class="project">
+                            <strong><a href="https://github.com/nirmalpratheep/SWE-AgentBench"
+                                    target="_blank">SWE-AgentBench</a></strong>
+                            <ul>
+                                <li>Developed <strong>multi-agent benchmark system</strong> with <strong>Evaluation and
+                                        Reporting agents</strong> to test coding capabilities</li>
+                                <li>Implemented <strong>automated test runner</strong> generating comprehensive
+                                    <strong>JSON reports</strong> for LLM performance analysis
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -184,13 +199,37 @@
                     <h3 class="category">ML Projects</h3>
                     <div class="project-list">
                         <div class="project">
+                            <strong><a href="https://github.com/nirmalpratheep/ImageNetClassifier"
+                                    target="_blank">ImageNetClassifier</a></strong>
+                            <ul>
+                                <li>Trained <strong>ResNet-50</strong> on <strong>ImageNet-1K (1.28M images)</strong>
+                                    achieving <strong>77.4% Top-1 Accuracy</strong></li>
+                                <li>Optimized training with <strong>CutMix</strong>, <strong>MixUp</strong>, and
+                                    <strong>Random Erasing</strong> augmentations; used <strong>LR Finder</strong> for
+                                    optimal convergence</li>
+                            </ul>
+                        </div>
+                        <div class="project">
+                            <strong><a
+                                    href="https://github.com/nirmalpratheep/MNISTImageClassifier-ArchitectureExploration"
+                                    target="_blank">MNISTImageClassifier-ArchitectureExploration</a></strong>
+                            <ul>
+                                <li>Conducted <strong>CNN architecture search</strong> achieving <strong>99.50%
+                                        accuracy</strong> with only <strong>17.3k parameters</strong></li>
+                                <li>Analyzed <strong>Receptive Field vs Accuracy</strong> trade-offs; optimized depth
+                                    and <strong>BatchNorm</strong> for efficiency</li>
+                            </ul>
+                        </div>
+                        <div class="project">
                             <strong><a href="https://github.com/nirmalpratheep/GraphNeuralNetworkDemo"
                                     target="_blank">GraphNeuralNetworkDemo</a></strong>
                             <ul>
                                 <li>Interactive <strong>GNN visualization</strong> using <strong>PyTorch Geometric +
-                                        Streamlit</strong></li>
-                                <li>Demonstrates <strong>message passing</strong> and node embedding updates in
-                                    real-time</li>
+                                        Streamlit</strong>; demonstrates <strong>message passing</strong> in real-time
+                                </li>
+                                <li>Implemented <strong>GCN, GIN, and GraphSage</strong> layers with visualizations for
+                                    <strong>node embedding updates</strong> and pooling strategies
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -200,7 +239,7 @@
                     <h2>📚 Publications</h2>
                     <ul class="compact-list">
                         <li><strong>Deep RL for FloorPlan Directive Optimization</strong> — GTAC'25 AMD Internal Tech
-                            Conference and SPS Tech Conference - Finalist (Arxiv pre-publish in process)</li>
+                            Conference and SPS Tech Conference - Finalist (arXiv pre-publish in process)</li>
                         <li><strong>ML based delay Prediction for FPGA Simulation tools - Finalist</strong> — GTAC'22
                             AMD Internal Tech Conference</li>
                         <li><strong>Adaptive Pilot Utilization for OFDM Channel Estimation</strong> — IEEE WAMICON 2009
@@ -214,7 +253,7 @@
                         <p><strong>ML/RL:</strong> PyTorch, HuggingFace, Stable Baselines 3, RL4CO, Gym</p>
                         <p><strong>Programming:</strong> Python, C++, Golang</p>
                         <p><strong>Infrastructure:</strong> Kubernetes, Docker, PostgreSQL, MongoDB</p>
-                        <p><strong>AI/LLM:</strong> LLM Training, Agentic Frameworks, GNN, Deep RL</p>
+                        <p><strong>AI/LLM:</strong> LLM Pre/PostTraining, Agentic Frameworks, GNN, Deep RL</p>
                     </div>
                     <div id="education">
                         <h2>🎓 Education</h2>
