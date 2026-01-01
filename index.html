@@ -75,6 +75,9 @@
                                     optimization for EDA tool performance</li>
                                 <li>Implemented <strong>GIN (Graph Isomorphism Network)</strong> for feature extraction
                                     from 1 to 15 million node graph netlists</li>
+                                <li>Developed <strong>token-based feature collection</strong> to avoid normalization problems between train/test splits and eliminate feature variation distribution issues</li>
+                                <li>Integrated <strong>PBT (Population Based Training)</strong> for automated hyperparameter search and optimization</li>
+                                <li>Built <strong>Ray-based distributed training</strong> infrastructure for scalable RL model training across multiple nodes</li>
                                 <li>Achieved 2% improvement in Placement quality while replacing manual tuning</li>
                             </ul>
                         </div>
@@ -86,7 +89,7 @@
                                     and dashboards</li>
                                 <li>Automatic YAML semantic verifier auto code generation tool to validate syntax and
                                     contents for HW/SW assumptions</li>
-                                <li>Improved turnaround time/throughput by 1.5x through continuous improvement</li>
+                                <li>Developed tool that splits entire device using divide-and-conquer approach, parallel processing each division of the chip through <strong>LSF Farm</strong> and merging results to handle/manage both compute/memory and overall throughput; enabled handling of <strong>20x larger chip versions</strong> compared to initial chip size</li>
                             </ul>
                         </div>
                         <div class="project">
@@ -112,6 +115,7 @@
                                 <li>Built <strong>feature engineering pipeline</strong> using <strong>GNN
                                         models</strong> and graph clustering for EDA router tool Design complexity
                                     prediction</li>
+                                <li>Part of the team developing <strong>regression framework</strong> with <strong>model monitoring</strong> and <strong>automated fine-tuning</strong> when performance degrades; handles both <strong>model drift</strong> and <strong>data drift</strong></li>
                             </ul>
                         </div>
                     </div>
@@ -187,11 +191,12 @@
                             <strong><a href="https://github.com/nirmalpratheep/SWE-AgentBench"
                                     target="_blank">SWE-AgentBench</a></strong>
                             <ul>
-                                <li>Developed <strong>multi-agent benchmark system</strong> with <strong>Evaluation and
-                                        Reporting agents</strong> to test coding capabilities</li>
-                                <li>Implemented <strong>automated test runner</strong> generating comprehensive
-                                    <strong>JSON reports</strong> for LLM performance analysis
-                                </li>
+                                <li>Developed <strong>multi-agent benchmark system</strong> with <strong>3-agent architecture</strong> (Evaluation Agent on Port 9001, Coding Agent on Port 9002, Reporting Agent on Port 9003) using agent-to-agent communication</li>
+                                <li>Integrated <strong>Gemini 2.0 Flash LLM</strong> for code generation and evaluation</li>
+                                <li>Built <strong>Docker-based test isolation framework</strong> for secure and reproducible test execution on <strong>SWE-bench dataset</strong></li>
+                                <li>Implemented <strong>automated repository setup</strong> with Git clone, checkout, and patch operations for test case preparation</li>
+                                <li>Developed <strong>test execution engine</strong> supporting <strong>FAIL_TO_PASS</strong> and <strong>PASS_TO_PASS</strong> test cases with automated prompt generation</li>
+                                <li>Created <strong>comprehensive JSON reporting system</strong> with individual and consolidated reports for LLM performance analysis and benchmarking</li>
                             </ul>
                         </div>
                     </div>
