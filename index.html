@@ -22,9 +22,9 @@
                 </div>
                 <nav class="nav-links">
                     <a href="#highlights">Highlights</a>
-                    <a href="#publications">Publications</a>
-                    <a href="#work-projects">Work Projects</a>
-                    <a href="#open-source">Side Projects</a>
+                    <a href="#publications">Research & Publications</a>
+                    <a href="#work-projects">Industry Experience</a>
+                    <a href="#open-source">AI/ML Projects</a>
                     <a href="#skills">Skills</a>
                     <a href="#education">Education</a>
                     <a href="#certifications">Certifications</a>
@@ -52,6 +52,8 @@
                 <section class="section" id="highlights">
                     <h2>🔥 Highlights</h2>
                     <ul class="compact-list">
+                        <li><span class="date">2024</span> <strong>Alignment_and_Reasoning_RL</strong>: <strong>14.2×
+                                zero-shot accuracy</strong> (2.84% → 40.46%) via SFT + <strong>GRPO</strong></li>
                         <li><span class="date">2024</span> <strong>Deep RL for FloorPlan Directive Optimization</strong>
                             (Finalist)</li>
                         <li><span class="date">2024</span> <strong>Agentic AI Framework</strong> with LLM-driven
@@ -66,7 +68,7 @@
                 </section>
 
                 <section class="section" id="publications">
-                    <h2>📚 Publications</h2>
+                    <h2>📚 Research & Publications</h2>
                     <ul class="compact-list">
                         <li><strong>Deep RL for FloorPlan Directive Optimization</strong> — GTAC'25 AMD Internal Tech
                             Conference and SPS Tech Conference - Finalist (arXiv pre-publish in process)</li>
@@ -78,7 +80,7 @@
                 </section>
 
                 <section class="section" id="work-projects">
-                    <h2>💼 Notable Work Experience</h2>
+                    <h2>💼 Industry Experience</h2>
                     <div class="project-list">
                         <div class="project">
                             <strong>Deep RL for Directive Optimization</strong>
@@ -145,7 +147,7 @@
                 </section>
 
                 <section class="section" id="open-source">
-                    <h2>🚀 Opensource Side Projects</h2>
+                    <h2>🚀 AI/ML Projects</h2>
 
                     <h3 class="category">RL Projects</h3>
                     <div class="project-list">
@@ -153,10 +155,23 @@
                             <strong><a href="https://github.com/nirmalpratheep/Alignment_and_Reasoning_RL"
                                     target="_blank">Alignment_and_Reasoning_RL</a></strong>
                             <ul>
-                                <li>Evaluated <strong>Qwen 2.5 Math 1.5B</strong> on <strong>Math Dataset (12.5k
-                                        problems)</strong>; analyzed <strong>4,200+ format failures</strong></li>
-                                <li>Identified key capability gaps in <strong>mathematical reasoning</strong> vs parser
-                                    issues in <strong>1.5B parameter</strong> models</li>
+                                <li>Built complete <strong>LLM alignment pipeline</strong>: Baseline →
+                                    <strong>SFT</strong> → <strong>GRPO RL</strong> achieving <strong>14.2× accuracy
+                                        improvement</strong> (2.84% → 40.46%)
+                                </li>
+                                <li>Implemented <strong>TRL GRPOTrainer</strong> with <strong>vLLM colocate
+                                        mode</strong> for high-throughput RL rollouts; achieved <strong>96.72% format
+                                        accuracy</strong></li>
+                                <li>Designed <strong>Optuna + ASHA</strong> hyperparameter optimization with
+                                    <strong>dual-GPU pipeline</strong> (training on GPU 0, vLLM eval on GPU 1)
+                                </li>
+                                <li><strong>W&B Experiments</strong>: <a
+                                        href="https://wandb.ai/nirmalpratheep-self/math-sft-optuna-asha"
+                                        target="_blank">HPO</a> | <a
+                                        href="https://wandb.ai/nirmalpratheep-self/math-sft" target="_blank">SFT</a> |
+                                    <a href="https://wandb.ai/nirmalpratheep-self/math-grpo-trl"
+                                        target="_blank">GRPO</a>
+                                </li>
                             </ul>
                         </div>
                         <div class="project">
