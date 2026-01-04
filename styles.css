@@ -173,14 +173,19 @@ strong {
 
 /* Compact Lists */
 .compact-list {
-    list-style: none;
+    list-style: disc;
+    padding-left: 20px;
 }
 
 .compact-list li {
-    padding: 5px 0;
+    padding: 6px 0;
     border-bottom: 1px solid #f1f5f9;
     font-size: 13px;
     color: var(--text-secondary);
+}
+
+.compact-list li::marker {
+    color: var(--accent);
 }
 
 .compact-list li:last-child {
