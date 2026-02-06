@@ -54,18 +54,22 @@
                 <section class="section" id="highlights">
                     <h2>🔥 Highlights</h2>
                     <ul class="compact-list">
-                        <li><span class="label"><strong>Alignment & RL</strong></span><span>Post-LLM training
-                                (<strong>Model</strong>: Qwen 2.5 Math 1.5B) on <strong>Math Dataset (Hendrycks
-                                    2021)</strong>; achieved <strong>14.2× zero-shot accuracy</strong> (Base 2% → SFT
-                                26% → GRPO <strong>40.46%</strong>)</span></li>
+                        <li><span class="label"><strong>LLM Pre-training</strong></span><span>Optimized <strong>1B
+                                    parameter model</strong> (DeepSeek Gated Sparse Attention + YaRN); achieved
+                                <strong>33% throughput improvement</strong> via custom Triton kernels, fused Flash
+                                Attention</span></li>
+                        <li><span class="label"><strong>LLM Post-training</strong></span><span>Built SFT → GRPO pipeline
+                                for <strong>Qwen 2.5 Math 1.5B</strong>; achieved <strong>14.2× zero-shot
+                                    accuracy</strong> (2% → 40.46%)</span></li>
+                        <li><span class="label"><strong>ML/CV</strong></span><span>Trained <strong>ResNet-50</strong> to
+                                <strong>77.4% Top-1</strong> on ImageNet-1K; Pre-trained <strong>135M LLM</strong> with
+                                40k tokens/sec</span></li>
                         <li><span class="label"><strong>AI in EDA</strong></span><span>Deep RL for FloorPlan
-                                optimization, LLM-based triage decisions</span></li>
+                                optimization, LLM-based triage decisions, GNN feature extraction</span></li>
                         <li><span class="label"><strong>Distributed Systems</strong></span><span>Ray, LSF Farm,
                                 Client/Server concurrent capture, <strong>3× throughput</strong></span></li>
                         <li><span class="label"><strong>Leadership</strong></span><span>Technical Lead of <strong>10+
                                     engineers</strong> across global sites</span></li>
-                        <li><span class="label"><strong>AI/ML</strong></span><span>Pre-trained <strong>135M
-                                    LLM</strong>, ResNet-50 <strong>77.4% Top-1</strong> on ImageNet</span></li>
                     </ul>
                 </section>
 
@@ -194,6 +198,25 @@
 
                     <h3 class="category">LLM Projects</h3>
                     <div class="project-list">
+                        <div class="project">
+                            <strong>1B Seedmodel Training Optimization</strong>
+                            <ul>
+                                <li>Optimized <strong>1B parameter model</strong> with <strong>DeepSeek-based Gated
+                                        Sparse Attention</strong> and <strong>YaRN Embedding</strong></li>
+                                <li>Performed comprehensive training infrastructure optimization: evaluated <strong>ZeRO
+                                        configs</strong>, <strong>FSDP vs DeepSpeed</strong> strategies, and
+                                    <strong>cost vs time tradeoffs</strong>
+                                </li>
+                                <li>Achieved <strong>33% throughput improvement</strong> through kernel-level
+                                    optimizations: fused <strong>Flash Attention</strong>, custom <strong>Triton
+                                        kernels</strong> for layer norm, rotary embedding, and sparse attention</li>
+                                <li>Reduced GPU stalls and CUDA sync overhead; minimized memory footprint and kernel
+                                    call count</li>
+                                <li>Utilized <strong>Nsight Systems</strong>, <strong>Nsight Compute</strong>, and
+                                    <strong>PyTorch Profiler</strong> for bottleneck analysis and performance tuning
+                                </li>
+                            </ul>
+                        </div>
                         <div class="project">
                             <strong><a href="https://github.com/nirmalpratheep/SmolLMv2-PreTrain"
                                     target="_blank">SmolLMv2-PreTrain</a></strong>
