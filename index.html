@@ -57,19 +57,22 @@
                         <li><span class="label"><strong>LLM Pre-training</strong></span><span>Optimized <strong>1B
                                     parameter model</strong> (DeepSeek Gated Sparse Attention + YaRN); achieved
                                 <strong>33% throughput improvement</strong> via custom Triton kernels, fused Flash
-                                Attention</span></li>
-                        <li><span class="label"><strong>LLM Post-training</strong></span><span>Built SFT → GRPO pipeline
-                                for <strong>Qwen 2.5 Math 1.5B</strong>; achieved <strong>14.2× zero-shot
-                                    accuracy</strong> (2% → 40.46%)</span></li>
+                                Attention; built <strong>SmolLM v2 135M</strong> with ~40k tokens/sec</span></li>
+                        <li><span class="label"><strong>LLM Post-training</strong></span><span>Achieved <strong>14.2×
+                                    mathematical reasoning</strong> (2.84% → 40.46% zero-shot) through SFT → GRPO RL on
+                                Qwen 2.5 Math 1.5B; <strong>Optuna + ASHA</strong> optimization with <strong>96.72%
+                                    format accuracy</strong></span></li>
+                        <li><span class="label"><strong>Agentic AI</strong></span><span>Built systems with <strong>90%+
+                                    success rate</strong>: 8-stage bug fixing pipeline using Gemini 2.0 Flash with AST
+                                analysis; multi-agent Docker-based SWE-bench evaluation</span></li>
                         <li><span class="label"><strong>ML/CV</strong></span><span>Trained <strong>ResNet-50</strong> to
-                                <strong>77.4% Top-1</strong> on ImageNet-1K; Pre-trained <strong>135M LLM</strong> with
-                                40k tokens/sec</span></li>
+                                <strong>77.4% Top-1</strong> on ImageNet-1K; developed <strong>Tamil BPE
+                                    tokenizer</strong> (5k vocab) with 3.1 char/token compression</span></li>
                         <li><span class="label"><strong>AI in EDA</strong></span><span>Deep RL for FloorPlan
                                 optimization, LLM-based triage decisions, GNN feature extraction</span></li>
-                        <li><span class="label"><strong>Distributed Systems</strong></span><span>Ray, LSF Farm,
-                                Client/Server concurrent capture, <strong>3× throughput</strong></span></li>
                         <li><span class="label"><strong>Leadership</strong></span><span>Technical Lead of <strong>10+
-                                    engineers</strong> across global sites</span></li>
+                                    engineers</strong> across global sites; Ray/LSF distributed systems with <strong>3×
+                                    throughput</strong></span></li>
                     </ul>
                 </section>
 
@@ -247,7 +250,7 @@
                                     <strong>TTFT</strong>, <strong>TPOT</strong>, <strong>ITL</strong>, and
                                     <strong>E2EL</strong> latency metrics
                                 </li>
-                                </ul>
+                            </ul>
                         </div>
                     </div>
 
