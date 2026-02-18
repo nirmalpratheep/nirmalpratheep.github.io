@@ -4,7 +4,7 @@
 
 ---
 
-AI/ML Research Engineer with 13+ years at AMD & Xilinx, specializing in **implementing and optimizing ML research** from paper to production. Hands-on experience with **LLM pre-training & alignment** (SFT, GRPO, RLHF), **deep reinforcement learning** for combinatorial optimization, and **GPU kernel-level performance optimization** (Triton, Flash Attention, Nsight profiling). Proven track record of translating research ideas into working systems, designing experiments, and publishing results at peer-reviewed conferences.
+AI/ML Research Engineer with 13+ years at AMD & Xilinx, specializing in **implementing and optimizing ML research** from paper to production. **LLM pre-training & alignment** — built end-to-end pipelines (SFT, GRPO, RLHF) achieving 14.2x reasoning gains; optimized 1B-parameter training with custom Triton kernels for 33% throughput improvement. **Deep reinforcement learning** — designed RL environments and GNN-based feature extraction for combinatorial optimization on graphs up to 15M nodes. **GPU performance optimization** — kernel-level profiling and optimization with Triton, Flash Attention, and Nsight Systems/Compute. **Agentic AI** — architected multi-step orchestration workflows with LLM-driven decision making, iterative self-correction, and automated evaluation frameworks achieving 90%+ success rates. Proven track record of translating research ideas into working systems, designing experiments, and publishing results at peer-reviewed conferences.
 
 ## Research & Publications
 

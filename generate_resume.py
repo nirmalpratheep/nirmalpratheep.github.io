@@ -143,11 +143,9 @@ def generate_resume():
     add_section_header(doc, "Summary")
     add_styled_paragraph(
         doc,
-        "AI/ML Research Engineer with 13+ years at AMD & Xilinx, specializing in implementing and optimizing "
-        "ML research from paper to production. Hands-on experience with LLM pre-training & alignment "
-        "(SFT, GRPO, RLHF), deep reinforcement learning for combinatorial optimization, and GPU kernel-level "
-        "performance optimization (Triton, Flash Attention, Nsight profiling). Proven track record of translating "
-        "research ideas into working systems, designing experiments, and publishing at peer-reviewed conferences.",
+        "13+ years at AMD & Xilinx turning ML research into production systems. "
+        "LLM training & alignment, deep RL, GPU kernel optimization, and agentic AI. "
+        "Published researcher. Led teams of 10+ engineers across global sites.",
         font_size=8.5, space_after=2
     )
 
