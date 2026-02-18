@@ -369,6 +369,55 @@ strong {
     border-top: 1px solid var(--border);
 }
 
+/* Research Cards Grid */
+.research-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.research-card {
+    padding: 14px 16px;
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    transition: box-shadow 0.2s;
+}
+
+.research-card:hover {
+    box-shadow: 0 2px 12px var(--glow);
+}
+
+.research-venue {
+    font-size: 9px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--accent);
+    background: var(--accent-light);
+    padding: 2px 8px;
+    border-radius: 3px;
+    display: inline-block;
+    margin-bottom: 6px;
+}
+
+.research-card strong {
+    font-size: 13px;
+    display: block;
+    margin-bottom: 6px;
+}
+
+.research-card p {
+    font-size: 11.5px;
+    color: var(--text-muted);
+    line-height: 1.55;
+}
+
+.research-card em {
+    color: var(--text-muted);
+    font-size: 11px;
+}
+
 /* Publications */
 .pub-list {
     list-style: none;

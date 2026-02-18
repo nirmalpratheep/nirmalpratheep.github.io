@@ -1,4 +1,4 @@
-"""Generate a 1-page professional resume in Word format."""
+"""Generate a 1-page professional resume in Word format — AI/ML Research Engineer."""
 from docx import Document
 from docx.shared import Pt, Inches, RGBColor
 from docx.enum.text import WD_ALIGN_PARAGRAPH
@@ -125,7 +125,7 @@ def generate_resume():
     p.alignment = WD_ALIGN_PARAGRAPH.CENTER
     p.paragraph_format.space_after = Pt(1)
     p.paragraph_format.space_before = Pt(0)
-    run = p.add_run("AI/ML Engineering Leader")
+    run = p.add_run("AI/ML Research Engineer")
     run.font.size = Pt(11)
     run.font.name = "Calibri"
     run.font.color.rgb = RGBColor(37, 99, 235)
@@ -143,20 +143,37 @@ def generate_resume():
     add_section_header(doc, "Summary")
     add_styled_paragraph(
         doc,
-        "13+ years building and leading AI/ML teams at AMD & Xilinx. "
-        "I convert ideas to production \u2014 LLM training, agentic systems, "
-        "and deep RL \u2014 while leading 10+ engineers across global sites.",
+        "AI/ML Research Engineer with 13+ years at AMD & Xilinx, specializing in implementing and optimizing "
+        "ML research from paper to production. Hands-on experience with LLM pre-training & alignment "
+        "(SFT, GRPO, RLHF), deep reinforcement learning for combinatorial optimization, and GPU kernel-level "
+        "performance optimization (Triton, Flash Attention, Nsight profiling). Proven track record of translating "
+        "research ideas into working systems, designing experiments, and publishing at peer-reviewed conferences.",
         font_size=8.5, space_after=2
     )
+
+    # --- RESEARCH & PUBLICATIONS ---
+    add_section_header(doc, "Research & Publications")
+    research_bullets = [
+        [("Deep RL for FloorPlan Optimization ", True), ("\u2014 GTAC'25 & SPS Tech Conference (Finalist, arXiv pending). ", False),
+         ("Formulated FPGA floorplan optimization as RL; GIN on 15M-node netlists; 2% placement QoR gain", False)],
+        [("ML-based Delay Prediction ", True), ("\u2014 GTAC'22 AMD Tech Conference (Finalist). ", False),
+         ("ML delay models + GNN design complexity analysis with drift detection", False)],
+        [("LLM Alignment & Reasoning via RL ", True), ("\u2014 End-to-end pipeline (Baseline \u2192 SFT \u2192 GRPO RL) on Qwen 2.5 Math 1.5B; ", False),
+         ("14.2\u00d7 zero-shot accuracy gain", True), (" with systematic ablation", False)],
+        [("Adaptive OFDM Pilots ", True), ("\u2014 IEEE WAMICON 2009", False)],
+    ]
+    for segments in research_bullets:
+        add_bullet(doc, segments)
 
     # --- CORE EXPERTISE ---
     add_section_header(doc, "Core Expertise")
     expertise_items = [
-        ("LLM Pre/Post-training: ", False, "Dense/Sparse architectures, Flash Attention, Triton kernels, SFT, GRPO, RLHF, TRL/vLLM, DeepSpeed/FSDP"),
-        ("Agentic AI & Deep RL: ", False, "Multi-agent systems, LangGraph/LangChain, GNN feature extraction, policy optimization, Ray"),
-        ("Infrastructure & Tools: ", False, "PyTorch, HuggingFace, Kubernetes, Docker, Nsight Systems/Compute, Python, C++, Golang"),
+        ("ML Frameworks & Training: ", "PyTorch, HuggingFace, TRL, vLLM, DeepSpeed/FSDP, Flash Attention, mixed-precision"),
+        ("GPU & Performance: ", "Triton kernel development, Nsight Systems/Compute profiling, CUDA, kernel-level optimization"),
+        ("RL & Agents: ", "Stable Baselines 3, Ray, Gym, LangGraph/LangChain, GNN feature extraction, policy optimization"),
+        ("Infrastructure: ", "Kubernetes, Docker, Ray, LSF, W&B, Optuna | Python, C++, Golang"),
     ]
-    for label, _, detail in expertise_items:
+    for label, detail in expertise_items:
         p = doc.add_paragraph()
         p.paragraph_format.space_after = Pt(1)
         p.paragraph_format.space_before = Pt(0)
@@ -184,7 +201,7 @@ def generate_resume():
     run = p.add_run("(formerly Xilinx)")
     run.font.size = Pt(8.5)
     run.font.name = "Calibri"
-    run = p.add_run("  |  Senior Staff / Technical Lead \u2014 AI/ML & Design Automation")
+    run = p.add_run("  |  Senior Staff / Research Engineer \u2014 AI/ML & Design Automation")
     run.font.size = Pt(8.5)
     run.font.name = "Calibri"
     run.font.color.rgb = RGBColor(37, 99, 235)
@@ -197,70 +214,57 @@ def generate_resume():
     run.font.name = "Calibri"
     run.font.color.rgb = RGBColor(113, 128, 150)
 
-    # -- Applied AI/ML for EDA --
+    # -- Research & ML Systems --
     p = doc.add_paragraph()
     p.paragraph_format.space_after = Pt(1)
     p.paragraph_format.space_before = Pt(2)
     p.paragraph_format.line_spacing = Pt(11)
-    run = p.add_run("Applied AI/ML for EDA")
+    run = p.add_run("Research & ML Systems")
     run.font.size = Pt(8.5)
     run.font.name = "Calibri"
     run.bold = True
     run.font.color.rgb = RGBColor(30, 58, 95)
 
-    amd_ai_bullets = [
-        [("Deep RL for directive optimization: ", True), ("GIN feature extraction on 15M-node netlists; 2% placement quality gain replacing manual tuning; ", False), ("GTAC'25 Finalist", True)],
-        [("Agentic AI framework ", True), ("using LangGraph/LLMs for autonomous triage with iterative self-correction and Dockerized orchestration", False)],
-        [("ML delay prediction ", True), ("and GNN-based design complexity models with automated fine-tuning, model monitoring, and drift detection; ", False), ("GTAC'22 Finalist", True)],
-        [("Ray-based distributed training ", True), ("infrastructure with Grid, ASHA, and PBT hyperparameter search for scalable RL training", False)],
+    research_bullets = [
+        [("Deep RL for directive optimization: ", True), ("designed environment, reward shaping, GIN feature extraction on 15M-node netlists; 2% placement QoR; ", False), ("GTAC'25 Finalist", True)],
+        [("Ray-based distributed training ", True), ("infrastructure with Grid, ASHA, PBT hyperparameter search for systematic experiment management", False)],
+        [("ML delay prediction + GNN design complexity models ", True), ("with automated fine-tuning, monitoring, drift detection; ", False), ("GTAC'22 Finalist", True)],
+        [("Agentic AI framework ", True), ("using LangGraph/LLMs for autonomous triage with self-correction and Dockerized evaluation", False)],
     ]
-    for segments in amd_ai_bullets:
+    for segments in research_bullets:
         add_bullet(doc, segments)
 
-    # -- Technical Leadership & Systems --
+    # -- Performance Engineering & Infrastructure --
     p = doc.add_paragraph()
     p.paragraph_format.space_after = Pt(1)
     p.paragraph_format.space_before = Pt(3)
     p.paragraph_format.line_spacing = Pt(11)
-    run = p.add_run("Technical Leadership & Systems Engineering")
+    run = p.add_run("Performance Engineering & Infrastructure")
     run.font.size = Pt(8.5)
     run.font.name = "Calibri"
     run.bold = True
     run.font.color.rgb = RGBColor(30, 58, 95)
 
-    amd_systems_bullets = [
-        [("Led 10+ engineer team ", True), ("across global sites for simulation delay capture tooling on ", False), ("10nm/7nm/2nm FPGA nodes", True)],
-        [("Architected client/server system ", True), ("(Boost Asio + Protobuf) enabling concurrent multi-capture with ", False), ("3x throughput", True)],
-        [("Designed divide-and-conquer parallel processing ", True), ("system via LSF Farm, enabling ", False), ("20x larger chip versions", True)],
-        [("Built graph compression pipeline ", True), ("processing 3.5B datapoints, reducing 1B instance paths to 500K patterns", False)],
-        [("Developed tool profiling, linters, dashboards, ", True), ("and YAML semantic verifier auto code generation for HW/SW validation", False)],
+    infra_bullets = [
+        [("Led 10+ engineer team ", True), ("across global sites for simulation tooling on ", False), ("10nm/7nm/2nm FPGA nodes", True)],
+        [("Architected client/server system ", True), ("(Boost Asio + Protobuf) with ", False), ("3x throughput", True), ("; divide-and-conquer parallel processing enabling ", False), ("20x scale", True)],
+        [("Graph compression pipeline ", True), ("processing 3.5B datapoints, reducing 1B paths to 500K patterns", False)],
     ]
-    for segments in amd_systems_bullets:
+    for segments in infra_bullets:
         add_bullet(doc, segments)
 
-    # --- OPEN SOURCE PROJECTS ---
-    add_section_header(doc, "Open Source AI/ML Projects")
+    # --- RESEARCH ENGINEERING PROJECTS ---
+    add_section_header(doc, "Research Engineering Projects")
     projects = [
-        ("LLM Alignment & Reasoning RL: ", "End-to-end pipeline (Baseline \u2192 SFT \u2192 GRPO RL) on Qwen 2.5 Math 1.5B achieving 14.2x accuracy gain (2.84% \u2192 40.46%), 96.72% format accuracy"),
-        ("1B Seed Model Pre-training: ", "Optimized 1B Dense model (75% GDN, 25% GSA). 33% throughput gain via custom Triton kernels and fused Flash Attention"),
-        ("SmolLM v2 Pre-training: ", "135M parameter model on FineWeb-Edu. ~40k tokens/sec (BF16); loss 11.6 \u2192 0.0015"),
-        ("Agentic Coding Pipeline: ", "Multi-stage bug fixing pipeline with LangGraph orchestration, prompt engineering, memory management, AST analysis, iterative self-correction. 90%+ success rate"),
-        ("SWE-Agent Benchmark: ", "3-agent evaluation architecture with Docker-based test isolation on SWE-bench"),
-        ("ImageNet Classifier: ", "ResNet-50 on ImageNet-1K achieving 77.4% Top-1 accuracy | Also: Tamil BPE Tokenizer, RL Car Navigation"),
+        ("LLM Alignment & Reasoning RL: ", "Baseline \u2192 SFT \u2192 GRPO RL on Qwen 2.5 Math 1.5B. 14.2\u00d7 accuracy gain. TRL GRPOTrainer + vLLM colocate, dual-GPU Optuna + ASHA"),
+        ("1B Seed Model Pre-training: ", "33% throughput gain via custom Triton kernels, fused Flash Attention. Nsight Systems/Compute profiling"),
+        ("SmolLM v2 Pre-training: ", "135M params on FineWeb-Edu. ~40k tokens/sec (BF16); loss 11.6 \u2192 0.0015"),
+        ("Agentic Coding Pipeline: ", "LangGraph orchestration, AST analysis, iterative self-correction. 90%+ success rate"),
+        ("SWE-Agent Benchmark: ", "3-agent eval architecture with Docker test isolation on SWE-bench"),
+        ("ImageNet Classifier: ", "ResNet-50, 77.4% Top-1. Also: Tamil BPE Tokenizer, RL Car Navigation, MNIST Architecture Search"),
     ]
     for label, detail in projects:
         add_bullet(doc, [(label, True), (detail, False)], space_after=1)
-
-    # --- PUBLICATIONS ---
-    add_section_header(doc, "Publications & Recognition")
-    pubs = [
-        "Deep RL for FloorPlan Optimization \u2014 GTAC'25 & SPS Tech Conference (Finalist, arXiv pending)",
-        "ML-based Delay Prediction \u2014 GTAC'22 AMD Tech Conference (Finalist)",
-        "Adaptive OFDM Pilots \u2014 IEEE WAMICON 2009",
-        "Top 15 \u2014 Innovate India Design Contest (ALTERA, 2007)  |  AMD Elite Mentorship Program",
-    ]
-    for pub in pubs:
-        add_bullet(doc, [(pub, False)], space_after=1)
 
     # --- EDUCATION & CERTS ---
     add_section_header(doc, "Education & Certifications")
@@ -288,6 +292,13 @@ def generate_resume():
         "Agentic Framework (HuggingFace) \u2022 Generative AI with LLMs (DeepLearning.AI) \u2022 "
         "ML Ops (DeepLearning.AI) \u2022 Machine Learning (Stanford) \u2022 Analytics Edge (MITx) \u2022 "
         "Parallel & Distributed Computing (Rice) \u2022 Kubernetes (Udacity) \u2022 Big Data with Spark (Berkeley)",
+        font_size=8, space_after=0, space_before=2, color=(113, 128, 150)
+    )
+
+    # Honors
+    add_styled_paragraph(
+        doc,
+        "Top 15 \u2014 Innovate India Design Contest (ALTERA, 2007)  |  AMD Elite Mentorship Program",
         font_size=8, space_after=0, space_before=2, color=(113, 128, 150)
     )
 
