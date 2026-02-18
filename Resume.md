@@ -23,7 +23,7 @@ AI/ML Research Engineer with 13+ years at AMD & Xilinx, specializing in **implem
 | LLM Alignment | **14.2x** reasoning gain | Qwen 2.5 Math 1.5B: 2.84% → 40.46% zero-shot accuracy (Baseline → SFT → GRPO) |
 | Pre-training | **33%** throughput gain | 1B parameter model: custom Triton kernels, fused Flash Attention, Nsight profiling |
 | Deep RL | **2%** placement QoR | RL directive optimization on 15M-node graphs, replacing manual expert tuning |
-| Agentic AI | **90%+** success rate | Multi-stage bug fixing pipeline with LangGraph, AST analysis, self-correction |
+| Agentic AI | **90%+** success rate | Multi-stage agentic pipeline with graph-based orchestration, AST analysis, self-correction |
 | Systems | **3x** throughput | Client/server architecture for simulation on 10nm/7nm/2nm FPGA nodes |
 | Systems | **20x** scale | Divide-and-conquer parallel processing via LSF Farm |
 
@@ -36,7 +36,7 @@ AI/ML Research Engineer with 13+ years at AMD & Xilinx, specializing in **implem
 - Researched and implemented **Deep RL for directive optimization**: designed environment, reward shaping, and GIN-based feature extraction on netlists up to **15M nodes**; published at **GTAC'25 (Finalist)**
 - Built **Ray-based distributed training** infrastructure with Grid, ASHA, and PBT hyperparameter search for systematic experiment management and scalable RL training
 - Developed **ML delay prediction algorithms** and **GNN-based design complexity models** with automated fine-tuning, model monitoring, and drift detection; published at **GTAC'22 (Finalist)**
-- Built **Agentic AI framework** using LangGraph and LLMs for **autonomous triage** with iterative self-correction and Dockerized evaluation
+- Built **Agentic AI framework** with multi-step orchestration and LLMs for **autonomous triage** with iterative self-correction and Dockerized evaluation
 
 #### Performance Engineering & Infrastructure
 - **Led 10+ engineer team** across global sites for simulation delay capture tooling on **10nm/7nm/2nm FPGA nodes**
@@ -64,7 +64,7 @@ AI/ML Research Engineer with 13+ years at AMD & Xilinx, specializing in **implem
 
 ### Agentic AI & Evaluation
 **[Agentic Coding Pipeline](https://github.com/nirmalpratheep/codingAgent)**
-- 8-stage bug fixing pipeline with LangGraph orchestration, AST-based dependency analysis, iterative self-correction. 90%+ success rate.
+- 8-stage bug fixing pipeline with graph-based orchestration, AST-based dependency analysis, iterative self-correction. 90%+ success rate.
 
 **[SWE-Agent Benchmark](https://github.com/nirmalpratheep/SWE-AgentBench)**
 - 3-agent evaluation architecture with Docker-based test isolation on SWE-bench for reproducible LLM benchmarking
@@ -78,7 +78,7 @@ AI/ML Research Engineer with 13+ years at AMD & Xilinx, specializing in **implem
 ## Skills
 
 - **ML Frameworks:** PyTorch, HuggingFace, TRL, vLLM, DeepSpeed, FSDP
-- **RL & Agents:** Stable Baselines 3, Ray, Gym, LangGraph, LangChain
+- **RL & Agents:** Stable Baselines 3, Ray, Gym, multi-agent orchestration
 - **GPU & Performance:** Triton, Flash Attention, Nsight Systems/Compute, CUDA, mixed-precision
 - **Languages:** Python, C++, Golang
 - **Infrastructure:** Kubernetes, Docker, Ray, LSF, W&B, Optuna

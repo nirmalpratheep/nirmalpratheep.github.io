@@ -170,7 +170,7 @@ def generate_resume():
     expertise_items = [
         ("ML Frameworks & Training: ", "PyTorch, HuggingFace, TRL, vLLM, DeepSpeed/FSDP, Flash Attention, mixed-precision"),
         ("GPU & Performance: ", "Triton kernel development, Nsight Systems/Compute profiling, CUDA, kernel-level optimization"),
-        ("RL & Agents: ", "Stable Baselines 3, Ray, Gym, LangGraph/LangChain, GNN feature extraction, policy optimization"),
+        ("RL & Agents: ", "Stable Baselines 3, Ray, Gym, multi-agent orchestration, GNN feature extraction, policy optimization"),
         ("Infrastructure: ", "Kubernetes, Docker, Ray, LSF, W&B, Optuna | Python, C++, Golang"),
     ]
     for label, detail in expertise_items:
@@ -229,7 +229,7 @@ def generate_resume():
         [("Deep RL for directive optimization: ", True), ("designed environment, reward shaping, GIN feature extraction on 15M-node netlists; 2% placement QoR; ", False), ("GTAC'25 Finalist", True)],
         [("Ray-based distributed training ", True), ("infrastructure with Grid, ASHA, PBT hyperparameter search for systematic experiment management", False)],
         [("ML delay prediction + GNN design complexity models ", True), ("with automated fine-tuning, monitoring, drift detection; ", False), ("GTAC'22 Finalist", True)],
-        [("Agentic AI framework ", True), ("using LangGraph/LLMs for autonomous triage with self-correction and Dockerized evaluation", False)],
+        [("Agentic AI framework ", True), ("with multi-step orchestration and LLMs for autonomous triage with self-correction and Dockerized evaluation", False)],
     ]
     for segments in research_bullets:
         add_bullet(doc, segments)
@@ -259,7 +259,7 @@ def generate_resume():
         ("LLM Alignment & Reasoning RL: ", "Baseline \u2192 SFT \u2192 GRPO RL on Qwen 2.5 Math 1.5B. 14.2\u00d7 accuracy gain. TRL GRPOTrainer + vLLM colocate, dual-GPU Optuna + ASHA"),
         ("1B Seed Model Pre-training: ", "33% throughput gain via custom Triton kernels, fused Flash Attention. Nsight Systems/Compute profiling"),
         ("SmolLM v2 Pre-training: ", "135M params on FineWeb-Edu. ~40k tokens/sec (BF16); loss 11.6 \u2192 0.0015"),
-        ("Agentic Coding Pipeline: ", "LangGraph orchestration, AST analysis, iterative self-correction. 90%+ success rate"),
+        ("Agentic Coding Pipeline: ", "Graph-based orchestration, AST analysis, iterative self-correction. 90%+ success rate"),
         ("SWE-Agent Benchmark: ", "3-agent eval architecture with Docker test isolation on SWE-bench"),
         ("ImageNet Classifier: ", "ResNet-50, 77.4% Top-1. Also: Tamil BPE Tokenizer, RL Car Navigation, MNIST Architecture Search"),
     ]
