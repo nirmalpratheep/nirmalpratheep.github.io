@@ -145,16 +145,16 @@ def generate_resume():
         doc,
         "13+ years at AMD & Xilinx turning ML research into production systems. "
         "LLM training & alignment, deep RL, GPU kernel optimization, and agentic AI. "
-        "Published researcher. Led teams of 10+ engineers across global sites.",
+        "Published researcher. Mentored teams of 10+ engineers across global sites.",
         font_size=8.5, space_after=2
     )
 
     # --- RESEARCH & PUBLICATIONS ---
     add_section_header(doc, "Research & Publications")
     research_bullets = [
-        [("Deep RL for FloorPlan Optimization ", True), ("\u2014 GTAC'25 & SPS Tech Conference (Finalist, arXiv pending). ", False),
+        [("Deep RL for FloorPlan Optimization ", True), ("\u2014 AMD Internal Conference (Finalist, arXiv pending). ", False),
          ("Formulated FPGA floorplan optimization as RL; GIN on 15M-node netlists; 2% placement QoR gain", False)],
-        [("ML-based Delay Prediction ", True), ("\u2014 GTAC'22 AMD Tech Conference (Finalist). ", False),
+        [("ML-based Delay Prediction ", True), ("\u2014 AMD Internal Conference (Finalist). ", False),
          ("ML delay models + GNN design complexity analysis with drift detection", False)],
         [("LLM Alignment & Reasoning via RL ", True), ("\u2014 End-to-end pipeline (Baseline \u2192 SFT \u2192 GRPO RL) on Qwen 2.5 Math 1.5B; ", False),
          ("14.2\u00d7 zero-shot accuracy gain", True), (" with systematic ablation", False)],
@@ -224,9 +224,9 @@ def generate_resume():
     run.font.color.rgb = RGBColor(30, 58, 95)
 
     research_bullets = [
-        [("Deep RL for directive optimization: ", True), ("designed environment, reward shaping, GIN feature extraction on 15M-node netlists; 2% placement QoR; ", False), ("GTAC'25 Finalist", True)],
+        [("Deep RL for directive optimization: ", True), ("designed environment, reward shaping, GIN feature extraction on 15M-node netlists; 2% placement QoR; ", False), ("AMD Internal Conference Finalist", True)],
         [("Ray-based distributed training ", True), ("infrastructure with Grid, ASHA, PBT hyperparameter search for systematic experiment management", False)],
-        [("ML delay prediction + GNN design complexity models ", True), ("with automated fine-tuning, monitoring, drift detection; ", False), ("GTAC'22 Finalist", True)],
+        [("ML delay prediction + GNN design complexity models ", True), ("with automated fine-tuning, monitoring, drift detection; ", False), ("AMD Internal Conference Finalist", True)],
         [("Agentic AI framework ", True), ("with multi-step orchestration and LLMs for autonomous triage with self-correction and Dockerized evaluation", False)],
     ]
     for segments in research_bullets:
@@ -244,7 +244,7 @@ def generate_resume():
     run.font.color.rgb = RGBColor(30, 58, 95)
 
     infra_bullets = [
-        [("Led 10+ engineer team ", True), ("across global sites for simulation tooling on ", False), ("10nm/7nm/2nm FPGA nodes", True)],
+        [("Mentored 10+ engineer team ", True), ("across global sites for simulation tooling on ", False), ("10nm/7nm/2nm FPGA nodes", True)],
         [("Architected client/server system ", True), ("(Boost Asio + Protobuf) with ", False), ("3x throughput", True), ("; divide-and-conquer parallel processing enabling ", False), ("20x scale", True)],
         [("Graph compression pipeline ", True), ("processing 3.5B datapoints, reducing 1B paths to 500K patterns", False)],
     ]
