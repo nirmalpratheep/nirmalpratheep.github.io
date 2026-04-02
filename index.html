@@ -24,10 +24,9 @@
                 </div>
                 <nav class="nav-links">
                     <a href="#summary">Summary</a>
-                    <a href="#research">Research & Publications</a>
-                    <a href="#benchmarks">Benchmarks & Results</a>
-                    <a href="#experience">Experience</a>
-                    <a href="#engineering">Engineering Projects</a>
+                    <a href="#hackathons">Hackathons & Research</a>
+                    <a href="#ai-systems">Applied AI</a>
+                    <a href="#backend">Backend Engineering</a>
                     <a href="#skills">Skills & Education</a>
                 </nav>
                 <nav class="social-links">
@@ -43,201 +42,78 @@
                 <!-- Summary -->
                 <section class="section" id="summary">
                     <p class="bio">
-                        <strong>13+ years</strong> at AMD &amp; Xilinx turning ML research into production systems.
-                        LLM training &amp; alignment, deep RL, GPU kernel optimization, and agentic AI.
-                        Published researcher. Mentored teams of <strong>10+ engineers</strong> across global sites.
+                        <strong>13+ years</strong> at AMD &amp; Xilinx bridging Applied AI and systems engineering.
+                        Built end-to-end AI based solutions. Mentored <strong>10+ engineers</strong> across global sites.
                     </p>
                 </section>
 
-                <!-- Research & Publications -->
-                <section class="section" id="research">
-                    <h2>Research & Publications</h2>
-                    <div class="research-grid">
-                        <div class="research-card">
-                            <div class="research-venue">AMD Internal Conference &middot; Finalist</div>
-                            <strong>Deep RL for FloorPlan Optimization</strong>
-                            <p>Formulated FPGA floorplan directive optimization as an RL problem.
-                                Designed GIN-based graph feature extraction on netlists up to 15M nodes.
-                                Achieved 2% placement quality improvement over manual expert tuning.
-                                <em>(arXiv pending)</em></p>
-                        </div>
-                        <div class="research-card">
-                            <div class="research-venue">AMD Internal Conference &middot; Finalist</div>
-                            <strong>ML-based Delay Prediction for EDA</strong>
-                            <p>Developed ML delay prediction models and GNN-based design complexity analysis
-                                with automated fine-tuning, model monitoring, and drift detection pipelines.</p>
-                        </div>
-                        <div class="research-card">
-                            <div class="research-venue">IEEE WAMICON 2009</div>
-                            <strong>Adaptive OFDM Pilots</strong>
-                            <p>Research on adaptive pilot placement for OFDM wireless communication systems.</p>
-                        </div>
-                        <div class="research-card">
-                            <strong>LLM Alignment &amp; Reasoning via RL</strong>
-                            <p>End-to-end alignment pipeline (Baseline &rarr; SFT &rarr; GRPO RL) on Qwen 2.5 Math 1.5B.
-                                14.2x zero-shot accuracy gain with systematic ablation across training stages.
-                                <a href="https://github.com/nirmalpratheep/Alignment_and_Reasoning_RL" target="_blank">Code</a> &middot;
-                                <a href="https://wandb.ai/nirmalpratheep-self/math-grpo-trl" target="_blank">W&B</a></p>
-                        </div>
-                    </div>
-                    <ul class="pub-list" style="margin-top: 14px;">
-                        <li><strong>Top 15</strong> &mdash; Innovate India Design Contest (ALTERA), 2007</li>
+                <!-- Hackathons & Research -->
+                <section class="section" id="hackathons">
+                    <h2>Hackathons & Research</h2>
+                    <ul class="eng-list">
+                        <li><strong>Deep RL for FloorPlan Optimization</strong> &mdash; AMD Internal Conference Finalist; GIN on 15M-node netlists, 2% QoR gain. <em>(arXiv pending)</em></li>
+                        <li><strong>ML-based Delay Prediction for EDA</strong> &mdash; AMD Internal Conference Finalist; GNN complexity models with automated fine-tuning & drift detection</li>
+                        <li><strong>Adaptive OFDM Pilots</strong> &mdash; IEEE WAMICON 2009; adaptive pilot placement for OFDM systems</li>
+                        <li><strong>ALTERA Design Challenge</strong> &mdash; Top 15, Innovate India Design Contest 2007</li>
+                        <li><strong><a href="https://github.com/nirmalpratheep/ImageNetClassifier" target="_blank">ImageNet Classifier</a></strong> &mdash; ResNet-50, 77.4% Top-1 on ImageNet-1K; CutMix, MixUp, Random Erasing, LR Finder</li>
                         <li><strong>Elite Mentorship Program</strong> &mdash; AMD</li>
                     </ul>
                 </section>
 
-                <!-- Benchmarks & Key Results -->
-                <section class="section" id="benchmarks">
-                    <h2>Benchmarks & Key Results</h2>
-                    <div class="impact-grid">
-                        <div class="impact-card">
-                            <div class="impact-source">LLM Alignment</div>
-                            <div class="impact-metric">14.2x</div>
-                            <div class="impact-label">Reasoning Gain</div>
-                            <p>Qwen 2.5 Math 1.5B: Baseline 2.84% &rarr; SFT 26% &rarr; GRPO 40.46% zero-shot accuracy.
-                                Systematic ablation across training stages.</p>
-                        </div>
-                        <div class="impact-card">
-                            <div class="impact-source">Pre-training</div>
-                            <div class="impact-metric">33%</div>
-                            <div class="impact-label">Throughput Gain</div>
-                            <p>1B parameter model pre-training: custom Triton kernels, fused Flash Attention,
-                                profiled with Nsight Systems/Compute.</p>
-                        </div>
-                        <div class="impact-card">
-                            <div class="impact-source">Deep RL</div>
-                            <div class="impact-metric">2%</div>
-                            <div class="impact-label">Placement QoR</div>
-                            <p>RL-based directive optimization on 15M-node graphs, replacing manual expert tuning.
-                                GIN feature extraction + Ray distributed training.</p>
-                        </div>
-                        <div class="impact-card">
-                            <div class="impact-source">Agentic AI</div>
-                            <div class="impact-metric">90%+</div>
-                            <div class="impact-label">Agent Success Rate</div>
-                            <p>Multi-stage agentic pipeline with graph-based orchestration,
-                                prompt engineering, AST analysis, and iterative self-correction.</p>
-                        </div>
-                        <div class="impact-card">
-                            <div class="impact-source">Systems</div>
-                            <div class="impact-metric">3x</div>
-                            <div class="impact-label">Throughput</div>
-                            <p>Distributed client/server architecture for simulation tooling on
-                                next-generation FPGA nodes (10nm/7nm/2nm).</p>
-                        </div>
-                        <div class="impact-card">
-                            <div class="impact-source">Systems</div>
-                            <div class="impact-metric">20x</div>
-                            <div class="impact-label">Scale</div>
-                            <p>Divide-and-conquer parallel processing via LSF Farm for chip simulation,
-                                enabling 20x larger designs.</p>
-                        </div>
-                    </div>
+
+                <!-- Applied AI -->
+                <section class="section" id="ai-systems">
+                    <h2>Applied AI</h2>
+
+                    <div class="exp-section-label">DAG Scheduler & Memory-Constrained Execution</div>
+                    <ul class="eng-list">
+                        <li>Researching <strong>auto-generated scheduling algorithms</strong> for executing large computational DAGs on memory-constrained accelerators &mdash; where tensors far exceed on-chip capacity, requiring orchestrated data movement across execution stages</li>
+                        <li>Approach: <strong>auto-research pipeline</strong> that identifies DAG motifs and synthesizes motif-specific scheduling strategies, avoiding one-size-fits-all solutions &mdash; <span class="metric-inline">50% latency reduction</span> vs. baseline schedulers</li>
+                    </ul>
+
+                    <div class="exp-section-label">GPU & Kernel Optimization</div>
+                    <ul class="eng-list">
+                        <li>Built <strong>agentic auto-optimizer</strong> for <strong>MoE workload optimization on B200</strong>:
+                            two-agent feedback loop where one agent iteratively runs, builds, and evaluates kernels while
+                            a second agent profiles using <strong>Nsight Compute &amp; Nsight Systems</strong> &mdash;
+                            loop continues until hitting the <strong>SPOL limit</strong>, achieving
+                            <span class="metric-inline">~20% gain</span> over naive PyTorch baseline</li>
+                    </ul>
+
+                    <div class="exp-section-label">Distributed RL & ML Systems (AMD)</div>
+                    <ul class="eng-list">
+                        <li><strong>Deep RL</strong> for FPGA directive optimization: GIN feature extraction on <strong>15M-node</strong> netlists, reward shaping &mdash; <span class="metric-inline">2% QoR gain</span></li>
+                        <li><strong>Ray distributed training</strong> with Grid/ASHA/PBT hyperparameter search for scalable RL experiments</li>
+                        <li><strong>GNN delay prediction</strong> with automated fine-tuning, monitoring, and drift detection</li>
+                    </ul>
+
+                    <div class="exp-section-label">Agentic AI (AMD)</div>
+                    <ul class="eng-list">
+                        <li>Production <strong>Agentic AI framework</strong>: reverse-engineers all EDA tools to build a <strong>skill document</strong> cataloguing every known error pattern and its resolution; during live sessions, the agent reasons over the error against the skill &amp; Python docs to suggest targeted fixes &mdash; graph-based LLM orchestration, iterative self-correction, Dockerized evaluation</li>
+                    </ul>
                 </section>
 
-                <!-- Professional Experience -->
-                <section class="section" id="experience">
-                    <h2>Professional Experience</h2>
-
-                    <div class="experience-entry">
-                        <div class="exp-header">
-                            <strong>AMD</strong> (formerly Xilinx)
-                            <span class="exp-tenure">2012 &ndash; Present &middot; San Jose, CA</span>
-                        </div>
-                        <div class="exp-role">Senior Staff / Research Engineer &mdash; AI/ML & Design Automation</div>
-
-                        <div class="exp-section-label">Research & ML Systems</div>
-                        <ul>
-                            <li>Researched and implemented <strong>Deep RL for directive optimization</strong>:
-                                designed environment, reward shaping, and GIN-based feature extraction on netlists
-                                up to <strong>15M nodes</strong>; published at <strong>AMD Internal Conference (Finalist)</strong></li>
-                            <li>Built <strong>Ray-based distributed training</strong> infrastructure with Grid, ASHA,
-                                and PBT hyperparameter search for systematic experiment management and scalable RL training</li>
-                            <li>Developed <strong>ML delay prediction algorithms</strong> and <strong>GNN-based design
-                                    complexity models</strong> with automated fine-tuning, model monitoring, and
-                                drift detection; published at <strong>AMD Internal Conference (Finalist)</strong></li>
-                            <li>Built <strong>Agentic AI framework</strong> with multi-step orchestration and LLMs for
-                                <strong>autonomous triage</strong> with iterative self-correction and Dockerized
-                                evaluation</li>
-                        </ul>
-
-                        <div class="exp-section-label">Performance Engineering & Infrastructure</div>
-                        <ul>
-                            <li><strong>Mentored 10+ engineer team</strong> across global sites for simulation delay capture
-                                tooling on <strong>10nm/7nm/2nm FPGA nodes</strong></li>
-                            <li>Architected <strong>client/server system</strong> (Boost Asio + Google Protobuf)
-                                enabling concurrent multi-capture with <strong>3x throughput</strong> improvement</li>
-                            <li>Designed <strong>divide-and-conquer parallel processing</strong> system via LSF Farm,
-                                enabling <strong>20x larger chip versions</strong></li>
-                            <li>Built <strong>graph compression pipeline</strong> processing 3.5B datapoints, reducing
-                                1B instance paths to 500K patterns with Python analytics and visualization</li>
-                            <li>Developed tool profiling, linters, debugging dashboards, and <strong>YAML
-                                    semantic verifier</strong> auto code generation for HW/SW validation</li>
-                        </ul>
+                <!-- Backend Engineering -->
+                <section class="section" id="backend">
+                    <h2>Backend Engineering</h2>
+                    <div class="exp-header">
+                        <strong>AMD</strong> (formerly Xilinx)
+                        <span class="exp-tenure">2012 &ndash; Present &middot; San Jose, CA</span>
                     </div>
-                </section>
+                    <div class="exp-role">Senior Staff / Research Engineer &mdash; Design Automation & Systems</div>
 
-                <!-- Research Engineering Projects -->
-                <section class="section" id="engineering">
-                    <h2>Research Engineering Projects</h2>
-                    <div class="project-grid">
-                        <div class="project-card">
-                            <strong><a href="https://github.com/nirmalpratheep/Alignment_and_Reasoning_RL"
-                                    target="_blank">LLM Alignment & Reasoning RL</a></strong>
-                            <p>Implemented end-to-end alignment pipeline: Baseline &rarr; SFT &rarr; GRPO RL on Qwen 2.5 Math 1.5B.
-                                14.2x accuracy gain (2.84% &rarr; 40.46%). TRL GRPOTrainer with vLLM colocate,
-                                dual-GPU Optuna + ASHA hyperparameter optimization.</p>
-                            <span class="project-links">
-                                <a href="https://wandb.ai/nirmalpratheep-self/math-sft-optuna-asha"
-                                    target="_blank">W&B HPO</a>
-                                <a href="https://wandb.ai/nirmalpratheep-self/math-sft" target="_blank">W&B SFT</a>
-                                <a href="https://wandb.ai/nirmalpratheep-self/math-grpo-trl" target="_blank">W&B
-                                    GRPO</a>
-                            </span>
-                        </div>
-                        <div class="project-card">
-                            <strong>1B Seed Model Pre-training</strong>
-                            <p>Optimized 1B Dense parameter model (75% GDN, 25% GSA with midpoint reversibility).
-                                33% throughput gain via custom Triton kernels, fused Flash Attention.
-                                Profiled with Nsight Systems/Compute for kernel-level bottleneck analysis.</p>
-                        </div>
-                        <div class="project-card">
-                            <strong><a href="https://github.com/nirmalpratheep/SmolLMv2-PreTrain"
-                                    target="_blank">SmolLM v2 Pre-training</a></strong>
-                            <p>Implemented 135M parameter model pre-training on FineWeb-Edu with Flash Attention.
-                                ~40k tokens/sec throughput using Mixed Precision (BF16); loss reduction from 11.6 to 0.0015.</p>
-                        </div>
-                        <div class="project-card">
-                            <strong><a href="https://github.com/nirmalpratheep/codingAgent"
-                                    target="_blank">Agentic Coding Pipeline</a></strong>
-                            <p>Multi-stage bug fixing pipeline with graph-based orchestration, prompt engineering,
-                                memory management, AST-based analysis, iterative self-correction with linter
-                                verification. 90%+ success rate on benchmarks.</p>
-                        </div>
-                        <div class="project-card">
-                            <strong><a href="https://github.com/nirmalpratheep/SWE-AgentBench"
-                                    target="_blank">SWE-Agent Benchmark</a></strong>
-                            <p>Multi-agent evaluation system with 3-agent architecture and Docker-based test isolation
-                                on SWE-bench dataset for reproducible automated LLM benchmarking.</p>
-                        </div>
-                        <div class="project-card">
-                            <strong><a href="https://github.com/nirmalpratheep/ImageNetClassifier"
-                                    target="_blank">ImageNet Classifier</a></strong>
-                            <p>ResNet-50 trained on ImageNet-1K achieving 77.4% Top-1 accuracy. CutMix, MixUp, Random
-                                Erasing augmentations with LR Finder optimization.</p>
-                        </div>
-                    </div>
-                    <p class="more-projects">
-                        More:
-                        <a href="https://github.com/nirmalpratheep/MiniTamilBPETokenizer" target="_blank">Tamil BPE
-                            Tokenizer</a> &middot;
-                        <a href="https://github.com/nirmalpratheep/RL-CarNavigationAgent" target="_blank">RL Car
-                            Navigation</a> &middot;
-                        <a href="https://github.com/nirmalpratheep/CIFAR100-Resnet34" target="_blank">CIFAR-100
-                            ResNet-34</a> &middot;
-                        <a href="https://github.com/nirmalpratheep/MNISTImageClassifier-ArchitectureExploration"
-                            target="_blank">MNIST Architecture Search</a>
-                    </p>
+                    <div class="exp-section-label">Distributed Systems & Infrastructure</div>
+                    <ul class="eng-list">
+                        <li><strong>Mentored 10+ engineers</strong> across global sites on simulation tooling for <strong>10nm/7nm/2nm</strong> FPGA nodes</li>
+                        <li><strong>Client/server system</strong> (Boost Asio + Protobuf) for concurrent multi-capture &mdash; <span class="metric-inline">3x throughput</span></li>
+                        <li><strong>Divide-and-conquer parallel processing</strong> via LSF Farm &mdash; <span class="metric-inline">20x scale</span></li>
+                    </ul>
+
+                    <div class="exp-section-label">Data Pipelines & Tooling</div>
+                    <ul class="eng-list">
+                        <li><strong>Graph compression pipeline</strong>: 3.5B datapoints &rarr; 500K patterns with Python analytics</li>
+                        <li>Tool profiling, linters, dashboards, and <strong>YAML semantic verifier</strong> for HW/SW validation</li>
+                    </ul>
                 </section>
 
                 <!-- Skills & Education -->
