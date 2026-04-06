@@ -68,7 +68,7 @@
                     <div class="exp-section-label">DAG Scheduler & Memory-Constrained Execution</div>
                     <ul class="eng-list">
                         <li>Researching <strong>auto-generated scheduling algorithms</strong> for executing large computational DAGs on memory-constrained accelerators &mdash; where tensors far exceed on-chip capacity, requiring orchestrated data movement across execution stages</li>
-                        <li>Approach: <strong>auto-research pipeline</strong> that identifies DAG motifs and synthesizes motif-specific scheduling strategies, avoiding one-size-fits-all solutions &mdash; <span class="metric-inline">50% latency reduction</span> vs. baseline schedulers</li>
+                        <li>Approach: <strong>auto-research pipeline</strong> identifies DAG motifs and synthesizes motif-specific scheduling strategies using a combination of <strong>greedy &amp; heuristic algorithms</strong> with <strong>AI-assisted heuristic selection via Multi-arm Bandit</strong> &mdash; MAB learns which heuristic action to apply per motif, avoiding one-size-fits-all solutions &mdash; <span class="metric-inline">50% latency reduction</span> vs. baseline schedulers</li>
                     </ul>
 
                     <div class="exp-section-label">GPU & Kernel Optimization</div>
